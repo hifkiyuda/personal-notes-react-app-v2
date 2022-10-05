@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class CreateNote extends React.Component {
   constructor(props) {
@@ -60,6 +61,10 @@ class CreateNote extends React.Component {
       </section>
     );
   }
+}
+
+CreateNote.propTypes = {
+  createNote: PropTypes.func.isRequired,
 }
 
 export default CreateNote;

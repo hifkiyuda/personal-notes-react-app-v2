@@ -5,6 +5,7 @@ import ArchivePage from './pages/ArchivePage';
 import HomePage from './pages/HomePage';
 import DetailPage from './pages/DetailPage';
 import CreatePage from './pages/CreatePage';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/archived-notes' element={<ArchivePage />} />
           <Route path='/create-note' element={<CreatePage />} />
           <Route path='/notes/:id' element={<DetailPage />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </main>
     </>

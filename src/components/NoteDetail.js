@@ -30,9 +30,11 @@ function NoteDetail({ isArchived, title, body, createdAt, id }) {
 }
 
 NoteDetail.propTypes = {
+  isArchived: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }
 
 export default NoteDetail;

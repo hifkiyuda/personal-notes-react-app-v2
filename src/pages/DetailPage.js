@@ -3,6 +3,8 @@ import React from 'react';
 import NoteDetail from '../components/NoteDetail';
 import { getNote } from '../utils/local-data';
 import { useParams } from 'react-router-dom';
+import PageNotFound from './PageNotFound';
+import PropTypes from 'prop-types';
 
 function DetailPageWrapper() {
   const { id } = useParams();
@@ -19,19 +21,23 @@ class DetailPage extends React.Component {
   }
 
   render() {
-    if (this.state.note === null) {
-      return <p>Note is not found!</p>;
+    if (this.state.note === undefined) {
+      return <PageNotFound />;
+    } else {
+      return (
+        <section className='detail-page'>
+          <NoteDetail 
+            isArchived={this.state.note.archived} 
+            {...this.state.note} 
+          />
+        </section>
+      );
     }
-
-    return (
-      <section className='detail-page'>
-        <NoteDetail 
-          isArchived={this.state.note.archived} 
-          {...this.state.note} 
-        />
-      </section>
-    );
   }
+}
+
+DetailPageWrapper.propTypes = {
+  id: PropTypes.string,
 }
 
 export default DetailPageWrapper;
