@@ -52,7 +52,7 @@ class ArchivePage extends React.Component {
           keywordChange={this.onKeywordChangeHandler}
         />
         {this.state.notes.length === 0 ? (
-          <p className="conditional-rendering">Notes is empty...</p>
+          <p className="conditional-rendering">Archive is empty...</p>
         ) : (
           <NoteList notes={notes} />
         )}

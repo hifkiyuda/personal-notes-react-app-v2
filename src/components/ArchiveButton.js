@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { archiveNote } from '../utils/local-data';
 import PropTypes from 'prop-types';
+import { RiInboxArchiveFill } from "react-icons/ri";
 
 function ArchiveButton({ id }) {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function ArchiveButton({ id }) {
   }
   
   return (
-    <button className='note-detail__archive button' onClick={() => onArchiveNote(id)}>Archive</button>
+    <RiInboxArchiveFill className='note-detail__archive icon' onClick={() => onArchiveNote(id)} />
   );
 }
 

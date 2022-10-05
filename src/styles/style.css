@@ -150,25 +150,21 @@ header {
   margin-top: 80px;
 }
 
-.note-detail__buttons .button {
-  padding: 5px 10px;
-  text-transform: uppercase;
-  font-weight: 700;
+.note-detail__buttons .icon {
+  width: 40px;
+  height: 40px;
   margin-left: 20px;
-  border: 2px solid #212121;
-  transition: all .3s ease;
   cursor: pointer;
+  transition: all .3s ease;
 }
 
 .note-detail__delete:hover {
-  background-color: red;
-  color: white;
+  color: red;
 }
 
 .note-detail__archive:hover,
 .note-detail__restore:hover {
-  background-color: blue;
-  color: white;
+  color: blue;
 }
 
 
